@@ -1,0 +1,7 @@
+ Launch EC2 Install 
+ Copy Public ip of the EC2 Instance.
+ Open MobaXtrem and click on Session then SSH
+ Enter Public ip in Remote Host
+ Enter User name in Specify username
+ Go to Advanced SSH Setting check box Use private key and browse .pem key
+ Click on OK it will get login.
