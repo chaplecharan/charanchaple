@@ -1,5 +1,0 @@
-Launch Instance
-open Powershell
-copy path of powershell user location > paste .pem key of Instance.
-ssh -i key.pem username@publicip
- Enter and will login to EC2 Instance.
