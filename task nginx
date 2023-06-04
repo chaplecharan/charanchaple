@@ -1,0 +1,8 @@
+step 1. take ssh of ec2 instance 
+step 2. sudo yum update 
+step 3. sudo yum install nginx 
+step 4. sudo service nginx status 
+step 5. sudo service nginx start 
+step 6. curl localhost 
+step 7. copy public ip of your instance
+step 8. paste in browser .
