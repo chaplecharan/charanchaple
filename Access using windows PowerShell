@@ -1,0 +1,13 @@
+create EC2 Instance
+Select Ubuntu AMI
+Create .pem key
+Allow SSH, HTTPS and HTTP then Launch Instance
+Open Ubantu
+Go to the .pem key path
+Copy SSH link from Instance and Paste
+sudo su -
+apt-get update
+apt-get install nginx -y
+service nginx status
+curl localhost
+Open browser and paste Instance public ip nginx page will display.
