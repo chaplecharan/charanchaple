@@ -1,0 +1,25 @@
+ ec2
+ instance name 
+ key pair: select key 
+ network settings: firewall 
+ (check) allow http traffic from the internet 
+ additional details 
+ userdata 
+ 
+#!/bin/bash
+sudo yum update -y 
+sudo install httpd -y 
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo echo "<h1> hello world $(hostname -f)</h1>" > /var/www/html/index.html
+
+ launch instance 
+ copy public ip 
+ paste ip in url 
+
+
+
+
+
+
+
