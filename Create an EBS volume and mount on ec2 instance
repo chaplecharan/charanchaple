@@ -1,0 +1,16 @@
+step 1 : Create Instance 
+step 2: Go  to the create vollume and select vollume 
+step 3: Then select action and attached the vollume
+step 4: Go to the instance and check the storage 
+step 5 : Connect to the ec2 user on ssh in cli 
+step 6: lsblk check the partition 
+step 7: fdisk /dev/xvdf
+step 8: create partition
+and enter defualt first sector and last sector and enter the parttion
+step 9:lsblk ( check parttion is create )
+step 10: mkfs /dev/xvdf1  (make the  filesystem)
+step 11: create directory for the  mount
+step 12 :mkdir /mnt/charan
+step 13: ls /mnt/
+step 14: mount /dev/xvdf1 /mnt/charan
+you will see new volume mounted successfully.
