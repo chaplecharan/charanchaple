@@ -1,0 +1,24 @@
+ Host a static webpage of s3 bucket and enable server access logs
+
+step1: go to the s3 and . click create bucket
+step2: bucket name:sta-bucket-hosting
+step3: block public access(give full access)
+step4:object ownership : ACL enabled and object ownership : ACL enabled 
+step5: click on create bucket and go to the browser 
+step6: download css free sample template and click upload
+step7. click add files 
+step8: click add folder and click upload then go to the properties
+step9: go to the last 
+step10: static website hosting 
+step11: click edit and click enable
+step12: index document: type index.html and click save changes
+step13: go below in static website 
+step14: bucket website endpoint: copy url  
+step15: go above server access logging > click edit > target bucket > give your bucket name > save changes
+step16: goto ACL 
+step17: click edit 
+step18: select list and read permission section
+step19: select all object 
+step20: actions 
+step21: make public using ACL  and paste in browser
+
