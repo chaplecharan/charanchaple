@@ -1,0 +1,39 @@
+ create s3 bucket and cross region replication
+
+step 1: go to the  s3 
+step2: click create bucket 
+step3:bucket name: my-bucket-123
+step4: mumbai region
+step5: acl enable 
+step6:  block all public access  (uncheck)
+step7: (check) i acknowledgement
+step8: bucket versioning (enable) 
+step9:  create bucket. 
+step10: now, create another bucket: s3 
+step 11: bucket name: my2-bucket-123
+step12: region sydney 
+step13: ACL enable 
+step14:  block all public access (uncheck)
+step15: (check) i acknowledgement
+step16: bucket versioning (enable)
+step17: create bucket. 
+
+step18: now, (click) bucket1 (data want to replicate) 
+step19: goto management 
+step20: scroll down 
+step21: (click) create replication rule
+step22: rule name: replication-rule1 
+step23: source bucket: (click) apply to all objects in the bucket 
+step24: in destination (click) browse s3 : and select sydney bucket (bucket2) 
+step25: in IAM role : (select) create new role
+step26: then save 
+step27: replicate existing objects : (select) yes 
+step28. (click) submit 
+step29. in complete report destination: give path mumbai(bucket1) ans click save 
+
+
+now, upload file in mumbai(bucket1) 
+
+step30: in permissions select : grant public-read access 
+step31: upload 
+step32: now, check bucket 2(sydney) the object is replicated successfully.
