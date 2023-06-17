@@ -1,0 +1,33 @@
+Create s3 bucket and apply cross a/c replication
+create bucket in two different A/c in different region 
+step1: go to the s3
+step2: select the bucket1 (A/c 1) 
+step3: go to management 
+step4: select create replication rule
+step5: rule name: cross-acc-rule1
+step6: in source bucket: (select) apply to all 
+step7: destination: select specify a bucket in another acc.  
+step8: paste Acc. id of 2nd A/c  
+step9: paste bucket name of 2nd A/c 
+step10:IAM role: select create new role 
+step11: click save 
+step12: selsect yes 
+step13: submit 
+step14: (choose) bucket 1 path and click save
+step15: now, upload object in bucket1 (A/c 2) 
+step16. and grand full access and upload
+step17: now, goto A/c 2 
+step18:click on created bucket 
+step19: go to the  permissions 
+step20: click on edit ACL 
+step21 :check list and write in everyone(public access) 
+step22: click i acknowledge 
+step23 :click save changes.
+
+step24: come back to A/c 1 bucket 
+step25: (click) management 
+step26: goto below to replication section
+step27: (click) destination bucket 
+step 28:click on object and copy object url
+step29: paste in browser.
+                                                                                                  ******
