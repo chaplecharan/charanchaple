@@ -1,0 +1,35 @@
+vpc peering connection? 
+
+create vpc> name:vpc-A > goto subnet > select vpc-A > sub.name: public > az: any 1 > cidr: 10.10.0.0/20 > create subnet > then for private : 10.10.16.0/20 > create subnet 
+
+now, goto create igw > name: vpc-a-igw > create igw > click attach to a vpc > available vpc : vpc-a > attach igw .
+
+goto rtable > edit route > click add route > 0.0.0.0/0 > Internet gateway > click save changes 
+
+
+now in diff. region create vpc: vpc-B > cidr: 172.25.0.0/16 
+create subnet: vpc-B > private-subnet-B > 
+
+now create instance in region Mumbai:
+instance name:public-web-ser > keypair-mumbai > netwrk : vpc:select vpc-A > launch instance 
+instance name: db-server-private-vpc-A > n/w : select vpc-A > subnet private > select existing sg > launch instance
+
+now create instance for singapore:
+instance name: db-server-prvt-vpc-B > keypair:create new and use > click edit n/w > vpc: vpc-B > launch instance
+
+now take ssh :
+copy .pem key to home dir. > chmod 600 <keypair> > now copy that .pem key to public instance(scp -i <key pair> <keypair> ec2-user@public ip)
+
+vpc > goto peering connection > vpc-peering > vpc-A > region: another-region > singapore >  vpc id: copy singapore vpc id >  goto singapore > peering connection > accept connction > 
+
+goto rtable (singapore) > edit route > add route > 10.10.0.0/16 > peering connection > save changes 
+
+goto rtable (mumbai) > eidt route > add route > 172.25.0.0/16 > peering connection > save changes.
+
+ping from public ip to vpc a private instance or vpc b private instance.
+
+endpoint :
+goto iam service > role > aws service > next > s3 readonly access > create-role 
+
+goto endpoint > create endpoint > update iam role. 
+take ssh and type aws s3 ls 
